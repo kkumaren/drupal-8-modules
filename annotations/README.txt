@@ -12,7 +12,14 @@ CONTENTS OF THIS FILE
 INTRODUCTION
 ------------
 
-Entity Annotationsmodule can be used to integrate footnotes, tooltips and hints features on your website. Annotations created as a content can easily be placed on different contents.
+Entity Annotations module can be used to integrate footnotes, tooltips and hints on your website. Derived from the Annotation entity, they can easily be managed from /admin/content/annotations.
+
+Footnotes
+ Footnotes are numbered references added at the bottom of a page. This can be done by using the [fn:id] tag, where "id" represent the id of the footnote.
+ 
+Tooltips
+
+Hints
 
 
 
