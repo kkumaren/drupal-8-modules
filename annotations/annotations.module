@@ -58,25 +58,3 @@ function annotations_entity_display_build_alter(&$build, $context) {
 function annotations_page_attachments_alter(array &$page) {
   $page['#attached']['library'][] = 'annotations/annotations.global';
 }
-
-
-
-/*
- *
- * https://drupal.stackexchange.com/questions/204433/edit-ckeditors-config-programmatically/220684#220684
-if ($filter = FilterFormat::load('basic_html')) {
-  if (($filter_html = $filter->filters('filter_html')) && $filter_html->status) {
-    $config = $filter_html->getConfiguration();
-    $allowed_html = !empty($config['settings']['allowed_html']) ? $config['settings']['allowed_html'] : NULL;
-    $matches = [];
-    if ($allowed_html && preg_match('/<span ([^>]*)>/', $allowed_html, $matches)) {
-      $new_attributes = array_filter(explode(' ', $matches[1]));
-      $new_attributes[] = 'target';
-      $new_attributes[] = 'title';
-      $new_attributes[] = 'class';
-      $config['settings']['allowed_html'] = preg_replace('/<a ([^>]*)>/', '<a ' . implode(' ', array_unique($new_attributes)) . '>', $allowed_html);
-      $filter->setFilterConfig('filter_html', $config);
-      $filter->save();
-    }
-  }
-}*/
