@@ -1,0 +1,11 @@
+entity_asset.css.add:
+  route_name: entity_asset.css.add
+  title: 'Add a new css'
+  appears_on:
+    - entity.entity_asset_css.collection
+
+entity_asset.js.add:
+  route_name: entity_asset.js.add
+  title: 'Add a new js'
+  appears_on:
+    - entity.entity_asset_js.collection

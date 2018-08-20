@@ -1,0 +1,7 @@
+name: Entity Asset
+type: module
+description: 'Module which allows external and inline assets (CSS and JS) to be added to entities.'
+core: '8.x'
+project: 'entity_asset'
+package: Development
+configure: entity_asset.settings

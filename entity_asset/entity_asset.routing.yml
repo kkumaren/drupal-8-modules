@@ -1,0 +1,81 @@
+entity_asset.settings:
+  path: '/admin/config/development/entity-asset'
+  defaults:
+    _form: '\Drupal\entity_asset\Form\EntityAssetSettingsForm'
+    _title: 'Entity Asset Settings'
+  requirements:
+    _permission: 'administer entity-asset settings'
+
+entity_asset.entity_asset:
+  path: '/admin/content/entity-asset'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Entity Asset'
+  requirements:
+    _permission: 'access administration pages'
+
+entity.entity_asset_css.collection:
+  path: '/admin/content/entity-asset/css'
+  defaults:
+    _entity_list: 'entity_asset_css'
+    _title: 'CSS Entity Asset'
+  requirements:
+    _permission: 'view entity asset entity'
+
+entity_asset.css.add:
+  path: '/admin/content/entity-asset/css/add'
+  defaults:
+    _entity_form: entity_asset_css.add
+    _title: 'Add CSS'
+  requirements:
+    _entity_create_access: 'entity_asset_css'
+
+
+entity.entity_asset_css.edit_form:
+  path: '/admin/content/entity-asset/css/{entity_asset_css}/edit'
+  defaults:
+    _entity_form: entity_asset_css.edit
+    _title: 'Edit Annotation'
+  requirements:
+    _entity_access: 'entity_asset_css.edit'
+
+entity.entity_asset_css.delete_form:
+  path: '/admin/content/entity-asset/css/{entity_asset_css}/delete'
+  defaults:
+    _entity_form: entity_asset_css.delete
+    _title: 'Delete footnote'
+  requirements:
+    _entity_access: 'entity_asset_css.delete'
+
+entity.entity_asset_js.collection:
+  path: '/admin/content/entity-asset/js'
+  defaults:
+    _entity_list: 'entity_asset_js'
+    _title: 'JS Entity Asset'
+  requirements:
+    _permission: 'view entity asset entity'
+
+entity_asset.js.add:
+  path: '/admin/content/entity-asset/js/add'
+  defaults:
+    _entity_form: entity_asset_js.add
+    _title: 'Add JS'
+  requirements:
+    _entity_create_access: 'entity_asset_js'
+
+
+entity.entity_asset_js.edit_form:
+  path: '/admin/content/entity-asset/js/{entity_asset_js}/edit'
+  defaults:
+    _entity_form: entity_asset_js.edit
+    _title: 'Edit Annotation'
+  requirements:
+    _entity_access: 'entity_asset_js.edit'
+
+entity.entity_asset_js.delete_form:
+  path: '/admin/content/entity-asset/js/{entity_asset_js}/delete'
+  defaults:
+    _entity_form: entity_asset_js.delete
+    _title: 'Delete footnote'
+  requirements:
+    _entity_access: 'entity_asset_js.delete'

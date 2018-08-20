@@ -1,0 +1,6 @@
+<?php
+
+
+define('ENTITY_ASSET_CONFIG_VAR', 'entity_asset');
+define('ENTITY_ASSET_TYPE_JS', 'js');
+define('ENTITY_ASSET_TYPE_CSS', 'css');

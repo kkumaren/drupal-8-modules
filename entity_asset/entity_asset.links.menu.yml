@@ -1,0 +1,23 @@
+entity_asset.settings:
+  title: 'Entity Asset'
+  description: 'Configure entity asset settings.'
+  parent: system.admin_config_development
+  route_name: entity_asset.settings
+
+entity_asset.entity_asset:
+  route_name: entity_asset.entity_asset
+  parent: system.admin_content
+  title: Entity Asset
+  description: 'Manage entity assets.'
+
+entity_asset.entity_asset.css:
+  title: 'CSS Entity Asset'
+  description: 'Add CSS to the page based on configurable rules.'
+  parent: entity_asset.entity_asset
+  route_name: entity.entity_asset_css.collection
+
+entity_asset.entity_asset.js:
+  title: 'JS Entity Asset'
+  description: 'Add JS to the page based on configurable rules.'
+  parent: entity_asset.entity_asset
+  route_name: entity.entity_asset_js.collection

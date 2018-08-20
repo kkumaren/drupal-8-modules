@@ -1,0 +1,24 @@
+services:
+  entity_asset.entity_helper:
+    class: Drupal\entity_asset\EntityHelper
+    public: true
+    arguments:
+      - '@entity_type.manager'
+      - '@database'
+
+  entity_asset.form_helper:
+      class: Drupal\entity_asset\Form\FormHelper
+      public: true
+      arguments:
+        - '@entity_asset.config'
+        - '@entity_asset.entity_helper'
+        - '@current_user'
+
+  entity_asset.config:
+    class: Drupal\entity_asset\EntityAssetConfig
+    public: true
+    arguments:
+      - '@entity_asset.entity_helper'
+      - '@config.factory'
+      - '@database'
+      - '@entity_type.manager'
